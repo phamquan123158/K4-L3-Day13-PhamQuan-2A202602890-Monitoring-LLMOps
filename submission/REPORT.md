@@ -8,7 +8,7 @@
 - **MSSV:** 2A202602890
 - **Lớp:** K4-L3A
 - **Repository URL:** https://github.com/phamquan123158/K4-L3-Day13-PhamQuan-2A202602890-Monitoring-LLMOps
-- **Commit SHA cuối:**
+- **Commit SHA cuối:** `31f006f180f4a6d9771ba1477e1e4c7dc3c9f081`
 - **Challenge ID:** `day13-k4-l3a-monitoring-llmops-v1`
 - **Tên project Langfuse cá nhân:** `day13-k4-l3a-2A202602890`
 
@@ -96,7 +96,7 @@ Evidence text đã lưu: [metric](evidence/12-incident-metric.txt), [log](eviden
 - **Cách hiểu luồng Metrics → Logs → Traces:** P95 xác định khoảng suy giảm; `req-0e0c46fc` định vị log bị ảnh hưởng; trace cho thấy retrieval mất 2.502 s trong khi generation chỉ mất 0.153 s.
 - **Vai trò của prompt version, token/cost, SLO hoặc rollback trong vận hành LLM:** version và label cho phép truy lại/rollback prompt; token/cost kiểm soát chi phí; SLO và early-warning phân biệt mức dịch vụ mục tiêu với suy giảm cần điều tra.
 - **Điều quan trọng nhất đã học:** chỉ kết luận root cause khi metric, log correlation ID và thời lượng span cùng xác nhận một bước xử lý.
-- **Hạn chế hoặc phần chưa hoàn thành, nếu có:** screenshot Langfuse đã được thêm và nhúng trong report; xác nhận ảnh không lộ API key và bổ sung ảnh riêng cho waterfall/prompt rollback nếu screenshot hiện tại chưa bao quát. Commit SHA cuối chỉ điền sau khi tạo commit nộp.
+- **Hạn chế hoặc phần chưa hoàn thành, nếu có:** screenshot Langfuse đã được thêm và nhúng trong report; xác nhận ảnh không lộ API key và bổ sung ảnh riêng cho waterfall/prompt rollback nếu screenshot hiện tại chưa bao quát. SHA trong mục 1 là HEAD đã xác minh trước cập nhật report này; hãy commit thay đổi report và dùng SHA mới trên LMS.
 
 ## 9. Checklist trước khi nộp
 
