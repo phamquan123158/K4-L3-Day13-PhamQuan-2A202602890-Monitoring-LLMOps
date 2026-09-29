@@ -1,0 +1,9 @@
+Challenge ID: day13-k4-l3a-monitoring-llmops-v1
+Cohort: K4
+Incident window (UTC): 2026-09-29 09:26:53 - 09:27:07
+Incident: rag_slow; disabled after workload; all incident flags false afterward.
+Requests: 5/5 returned HTTP 200; feature=monitoring.
+Baseline P95 latency: 1218 ms (5 baseline sample requests).
+Challenge P95 latency: 2654 ms (5 challenge requests), above the 2000 ms challenge threshold.
+Challenge TTFT P95: 50 ms.
+Retrieval success: 5/5.

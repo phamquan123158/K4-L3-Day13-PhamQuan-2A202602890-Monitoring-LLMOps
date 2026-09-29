@@ -1,0 +1,2 @@
+Actual response_sent JSONL fields; payload omitted.
+{"ts":"2026-09-29T09:26:56.246045Z","event":"response_sent","service":"api","correlation_id":"req-0e0c46fc","feature":"monitoring","model":"claude-sonnet-4-5","env":"dev","latency_ms":2654,"ttft_ms":50,"tokens_in":36,"tokens_out":117,"cost_usd":0.001863,"tool_name":"retrieval","tool_success":true}

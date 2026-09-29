@@ -1,0 +1,6 @@
+Langfuse trace evidence for the same synthetic input; prompt content omitted.
+Baseline label v1: trace da83975537b21709b9a639954ffe7a49, correlation_id=req-24a4af97.
+Candidate label v2: trace bf7c40d30d813e9ed84914bf0c1d3434, correlation_id=req-015bcff9.
+Production promoted to v2: trace 5ffa3847347ef03d41d0850602635b76, correlation_id=req-d815e464.
+Production after rollback to v1: trace adf01943995b07d8af837cfa2460e30e, correlation_id=req-de8be12d.
+Current production resolves to version 1 with labels baseline, production.

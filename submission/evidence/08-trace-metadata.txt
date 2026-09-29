@@ -1,0 +1,14 @@
+Langfuse observations v2; payload/input/output omitted.
+trace_id=b4c9ca13605c491ea915ed72a7c40f57
+correlation_id=req-0e0c46fc
+prompt_name=day13-chat
+prompt_label=production
+prompt_version=1
+prompt_source=langfuse
+model=claude-sonnet-4-5
+input_tokens=36
+output_tokens=117
+total_tokens=153
+input_cost_usd=0.000108
+output_cost_usd=0.001755
+total_cost_usd=0.001863

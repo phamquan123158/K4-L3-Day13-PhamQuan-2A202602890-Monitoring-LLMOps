@@ -4,12 +4,12 @@ Mỗi alert đều dựa trên triệu chứng người dùng hoặc SLO, không
 
 ## Alert 1
 
-- Tên: p95_latency_budget_breach
+- Tên: p95_latency_degradation
 - Severity: warning
 - Duration: 5m
 - Kênh thông báo: Slack
 - SLI/SLO liên quan: SLO fast_successful_requests, error budget 0.5% trong 28 ngày
-- Điều kiện và thời gian duy trì: p95 latency vượt 3000ms liên tục 5 phút
+- Điều kiện và thời gian duy trì: p95 latency vượt 2000ms liên tục 5 phút; đây là early-warning dưới SLO latency 3000ms.
 - Ảnh hưởng tới người dùng: người dùng thấy phản hồi chậm, độ tin cậy cảm nhận giảm, đặc biệt trên query dài hoặc trong giờ cao điểm
 - Ba bước kiểm tra đầu tiên:
   1. Kiểm tra dashboard panel latency để thấy liệu P95/P99 có vượt ngưỡng và khoảng thời gian nào bắt đầu.

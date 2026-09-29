@@ -1,0 +1,3 @@
+Sanitized structured-log fields only; payload, query, user ID, and seed omitted.
+{"ts":"2026-09-29T09:26:53.589991Z","event":"request_received","correlation_id":"req-0e0c46fc","feature":"monitoring"}
+{"ts":"2026-09-29T09:26:56.246045Z","event":"response_sent","correlation_id":"req-0e0c46fc","feature":"monitoring","latency_ms":2654,"ttft_ms":50,"tool_name":"retrieval","tool_success":true}

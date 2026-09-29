@@ -1,0 +1,9 @@
+Langfuse API v2 observation extract; input/output omitted.
+Correlation ID: req-0e0c46fc
+Trace ID: b4c9ca13605c491ea915ed72a7c40f57
+lab-agent-run AGENT: observation=444556736439fb3f; root; duration=2.656s
+rag-retrieve RETRIEVER: observation=c0d8e7ead1f960cd; parent=444556736439fb3f; duration=2.502s
+llm-generate GENERATION: observation=52624b1b770ffbbf; parent=444556736439fb3f; duration=0.153s
+Generation model: claude-sonnet-4-5
+Usage: input=36, output=117, total=153 tokens
+Cost: input=$0.000108, output=$0.001755, total=$0.001863

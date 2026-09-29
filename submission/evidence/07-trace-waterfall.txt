@@ -1,0 +1,4 @@
+Langfuse observations v2; trace b4c9ca13605c491ea915ed72a7c40f57; correlation_id=req-0e0c46fc.
+lab-agent-run AGENT: id=444556736439fb3f; root; duration=2.656s
+  rag-retrieve RETRIEVER: id=c0d8e7ead1f960cd; parent=444556736439fb3f; duration=2.502s
+  llm-generate GENERATION: id=52624b1b770ffbbf; parent=444556736439fb3f; duration=0.153s

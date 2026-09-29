@@ -1,0 +1,6 @@
+Langfuse prompt API metadata; prompt content omitted.
+Prompt: day13-chat
+Available versions: 1, 2
+Version 1 labels: baseline, production
+Version 2 labels: candidate, latest
+Production after rollback resolves to version 1.

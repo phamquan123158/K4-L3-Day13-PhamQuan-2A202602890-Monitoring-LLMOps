@@ -1,7 +1,7 @@
 alerts:
-  - name: p95_latency_budget_breach
+  - name: p95_latency_degradation
     severity: warning
-    condition: 'p95 latency > 3000ms for 5 minutes'
+    condition: 'p95 latency > 2000ms for 5 minutes'
     duration: 5m
     type: symptom-based
     channel: slack

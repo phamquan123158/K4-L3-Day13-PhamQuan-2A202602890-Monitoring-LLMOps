@@ -1,0 +1,12 @@
+Langfuse observations v2 extract; 24 traces in the last hour had AGENT, RETRIEVER, and GENERATION observations. Ten sample entries follow; payloads omitted.
+trace_id | correlation_id | prompt_label | prompt_version
+ab44668f4610658b584b25898b9bf966 | req-d852de12 | production | 1
+95513c05dc032fcf5530d0cde02c8549 | req-918f4e2b | production | 1
+8b0db97620c8421c19bb5ae2a996f548 | req-095a8d38 | production | 1
+8cd5ed835be446076915960471207d00 | req-e613be6c | production | 1
+b4c9ca13605c491ea915ed72a7c40f57 | req-0e0c46fc | production | 1
+adf01943995b07d8af837cfa2460e30e | req-de8be12d | production | 1
+5ffa3847347ef03d41d0850602635b76 | req-d815e464 | production | 2
+bf7c40d30d813e9ed84914bf0c1d3434 | req-015bcff9 | candidate | 2
+da83975537b21709b9a639954ffe7a49 | req-24a4af97 | baseline | 1
+c00fb9f33f93b288f0f6777835737974 | req-c0efef1c | production | 1

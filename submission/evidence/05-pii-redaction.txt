@@ -1,0 +1,5 @@
+Synthetic input (not real personal data):
+Email student@example.test, phone 090 123 4567, CCCD 012345678901, card 4111 1111 1111 1111
+
+scrub_text output:
+Email [REDACTED_EMAIL], phone [REDACTED_PHONE_VN], CCCD [REDACTED_CCCD], card [REDACTED_CREDIT_CARD]
