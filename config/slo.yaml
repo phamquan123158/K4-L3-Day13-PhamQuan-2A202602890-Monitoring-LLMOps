@@ -7,7 +7,10 @@ primary_slo:
     total_event: 'event == "request_received"'
   target_percent: 99.5
   error_budget_percent: 0.5
-  note: Học viên phải giải thích hoặc điều chỉnh ngưỡng bằng baseline của mình.
+  note: >-
+    Chúng ta giữ SLO ở 99.5% request thành công trong 28 ngày, tương đương error budget 0.5%.
+    Với baseline đã chạy, P95 latency thường dưới 500ms và dưới 3s; do đó ngưỡng 3s là hợp lý
+    để phát hiện suy giảm trước khi người dùng thấy độ trễ rõ rệt.
 guardrails:
   error_rate_pct_max: 2
   daily_cost_usd_max: 2.5

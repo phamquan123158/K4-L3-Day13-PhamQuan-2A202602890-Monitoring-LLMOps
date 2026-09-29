@@ -31,6 +31,14 @@ python scripts/validate_dashboard.py
 
 Validator kiểm tra cấu trúc contract; nó không thể chứng minh biểu đồ trong ảnh dùng đúng dữ liệu. Evidence runtime vẫn bắt buộc.
 
+Repo có dashboard Streamlit đọc trực tiếp `data/logs.jsonl`, tự cập nhật mỗi 30 giây và có nút refresh tức thời. Sau khi cài `requirements.txt`, chạy:
+
+```powershell
+streamlit run scripts/dashboard.py
+```
+
+Mở URL local do Streamlit in ra; dashboard hiển thị sáu panel trong cửa sổ 60 phút, với threshold từ `config/dashboard.yaml`.
+
 ## Cách kiểm tra runtime
 
 1. Lưu ảnh baseline và giá trị P95/error/cost hiện tại.

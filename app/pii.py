@@ -4,18 +4,22 @@ import hashlib
 import re
 
 PII_PATTERNS: dict[str, str] = {
-    "email": r"[\w\.-]+@[\w\.-]+\.\w+",
-    "phone_vn": r"(?<!\d)(?:\+84|0)(?:[ .-]?\d){9}(?!\d)",
-    "cccd": r"\b\d{12}\b",
-    "credit_card": r"\b\d{4}[- ]?\d{4}[- ]?\d{4}[- ]?\d{4}\b",
-    # TODO: Add more patterns (e.g., Passport, Vietnamese address keywords)
+    "email": r"\b[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}\b",
+    "phone_vn": r"(?<!\d)(?:\+84|84|0)(?:[ .-]?\d){9,10}(?!\d)",
+    "cccd": r"\b(?:\d{9}|\d{12})\b",
+    "passport": r"\b[A-Z]\d{7}\b|\b[A-Z]{2}\d{7}\b",
+    "credit_card": r"\b(?:\d[ -]?){15,19}\b",
+    "address_keywords": r"\b(?:số\s*nhà|đường|phố|quận|huyện|xã|thị trấn|tỉnh|thành phố)\b",
 }
 
 
 def scrub_text(text: str) -> str:
+    if not isinstance(text, str):
+        return text
+
     safe = text
     for name, pattern in PII_PATTERNS.items():
-        safe = re.sub(pattern, f"[REDACTED_{name.upper()}]", safe)
+        safe = re.sub(pattern, f"[REDACTED_{name.upper()}]", safe, flags=re.IGNORECASE)
     return safe
 
 

@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+import json
 import subprocess
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import yaml
+
+from scripts import dashboard
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -31,6 +35,34 @@ def test_repository_dashboard_contract_is_valid() -> None:
 
     assert result.returncode == 0, result.stdout + result.stderr
     assert "6/6 panel" in result.stdout
+
+
+def test_dashboard_loads_only_recent_valid_jsonl_records(
+    monkeypatch, tmp_path: Path
+) -> None:
+    current_time = datetime.now(timezone.utc)
+    current_record = {
+        "ts": current_time.isoformat(),
+        "event": "response_sent",
+        "latency_ms": 120,
+    }
+    old_record = {
+        "ts": (current_time - timedelta(minutes=61)).isoformat(),
+        "event": "response_sent",
+        "latency_ms": 9000,
+    }
+    log_path = tmp_path / "logs.jsonl"
+    log_path.write_text(
+        json.dumps(current_record) + "\nnot-json\n" + json.dumps(old_record) + "\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(dashboard, "LOG_PATH", log_path)
+
+    records = dashboard.load_records()
+
+    assert len(records) == 1
+    assert records[0]["event"] == "response_sent"
+    assert records[0]["latency_ms"] == 120
 
 
 def test_validator_rejects_panel_without_threshold(tmp_path: Path) -> None:

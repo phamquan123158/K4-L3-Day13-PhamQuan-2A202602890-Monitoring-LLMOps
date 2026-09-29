@@ -1,25 +1,25 @@
 alerts:
-  - name: TODO_alert_1
-    severity: TODO
-    condition: TODO
-    duration: TODO
+  - name: p95_latency_budget_breach
+    severity: warning
+    condition: 'p95 latency > 3000ms for 5 minutes'
+    duration: 5m
     type: symptom-based
     channel: slack
-    owner: TODO
+    owner: platform-oncall
     runbook: docs/alerts.md#alert-1
-  - name: TODO_alert_2
-    severity: TODO
-    condition: TODO
-    duration: TODO
+  - name: retrieval_failure_spike
+    severity: critical
+    condition: 'retrieval success rate < 90% for 10 minutes'
+    duration: 10m
     type: symptom-based
     channel: slack
-    owner: TODO
+    owner: llm-ops
     runbook: docs/alerts.md#alert-2
-  - name: TODO_alert_3
-    severity: TODO
-    condition: TODO
-    duration: TODO
+  - name: quality_and_cost_regression
+    severity: warning
+    condition: 'quality score < 0.75 or cost > 2.5 USD/day for 15 minutes'
+    duration: 15m
     type: symptom-based
     channel: slack
-    owner: TODO
+    owner: product-analytics
     runbook: docs/alerts.md#alert-3
